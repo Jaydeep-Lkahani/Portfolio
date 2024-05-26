@@ -1,0 +1,1082 @@
+/* ###################################################################### */
+/* Fonts : Sen */
+/* ###################################################################### */
+
+@font-face {
+  font-family: "Sen";
+  src: url("../fonts/Sen-ExtraBold.eot");
+  src: local("Sen ExtraBold"), local("Sen-ExtraBold"),
+    url("../fonts/Sen-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Sen-ExtraBold.woff2") format("woff2"), url("../fonts/Sen-ExtraBold.woff") format("woff"),
+    url("../fonts/Sen-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sen";
+  src: url("../fonts/Sen-Bold.eot");
+  src: local("Sen Bold"), local("Sen-Bold"), url("../fonts/Sen-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Sen-Bold.woff2") format("woff2"), url("../fonts/Sen-Bold.woff") format("woff"),
+    url("../fonts/Sen-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sen";
+  src: url("../fonts/Sen-Regular.eot");
+  src: local("Sen Regular"), local("Sen-Regular"), url("../fonts/Sen-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Sen-Regular.woff2") format("woff2"), url("../fonts/Sen-Regular.woff") format("woff"),
+    url("../fonts/Sen-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ###################################################################### */
+/* General Variables */
+/* ###################################################################### */
+
+:root {
+  /* ################################### */
+  /* Fonts */
+
+  --font-primary: "Sen";
+
+  /* ################################### */
+  /* Fonts Weights */
+
+  --reg: 400;
+  --bold: 700;
+  --ex-bold: 800;
+
+  /* ################################### */
+  /* Colors */
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #fca311;
+  --color-secondary: #14213d;
+  --color-bg-primary: #e5e5e5;
+
+  /* ################################### */
+  /* cursor variable */
+
+  --cursorDefault: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='31' fill='none' viewBox='0 0 26 31'%3E%3Cpath fill='%23fff' fill-rule='evenodd' stroke='%23010101' stroke-linecap='square' stroke-width='2.5' d='M21.993 14.425 2.549 2.935l4.444 23.108 4.653-10.002 10.347-1.616Z' clip-rule='evenodd'/%3E%3C/svg%3E"),
+    auto;
+  --cursorPointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='29' fill='none' viewBox='0 0 28 29'%3E%3Cpath fill='%23fff' d='M6.84 21.83c-.47-.6-1.05-1.82-2.07-3.34-.58-.83-2.01-2.41-2.45-3.23a2.1 2.1 0 0 1-.25-1.67 2.2 2.2 0 0 1 2.39-1.67c.85.18 1.63.6 2.25 1.2.43.41.82.85 1.18 1.32.27.34.33.47.63.85.3.39.5.77.35.2-.11-.83-.31-2.23-.6-3.48-.21-.95-.26-1.1-.46-1.82s-.32-1.32-.54-2.13c-.2-.8-.35-1.62-.46-2.44a4.7 4.7 0 0 1 .43-3.08c.58-.55 1.44-.7 2.17-.37a4.4 4.4 0 0 1 1.57 2.17c.43 1.07.72 2.19.86 3.33.27 1.67.79 4.1.8 4.6 0-.61-.11-1.91 0-2.5.12-.6.54-1.1 1.12-1.33.5-.15 1.02-.19 1.53-.1.52.1.98.4 1.29.83.38.98.6 2 .63 3.05.04-.91.2-1.82.47-2.7.28-.39.68-.67 1.15-.8.55-.1 1.11-.1 1.66 0 .46.15.85.44 1.14.82.35.88.56 1.82.63 2.77 0 .23.12-.65.48-1.24a1.67 1.67 0 1 1 3.17 1.07v3.77c-.06.97-.2 1.94-.4 2.9-.29.85-.7 1.65-1.2 2.38-.8.9-1.48 1.92-1.98 3.02a6.67 6.67 0 0 0 .03 3.2c-.68.07-1.37.07-2.05 0-.65-.1-1.45-1.4-1.67-1.8a.63.63 0 0 0-1.13 0c-.37.64-1.18 1.79-1.75 1.85-1.12.14-3.42 0-5.23 0 0 0 .3-1.66-.39-2.27-.68-.6-1.38-1.3-1.9-1.76l-1.4-1.6Z'/%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.25' d='M6.84 21.83c-.47-.6-1.05-1.82-2.07-3.34-.58-.83-2.01-2.41-2.45-3.23a2.1 2.1 0 0 1-.25-1.67 2.2 2.2 0 0 1 2.39-1.67c.85.18 1.63.6 2.25 1.2.43.41.82.85 1.18 1.32.27.34.33.47.63.85.3.39.5.77.35.2-.11-.83-.31-2.23-.6-3.48-.21-.95-.26-1.1-.46-1.82s-.32-1.32-.54-2.13c-.2-.8-.35-1.62-.46-2.44a4.7 4.7 0 0 1 .43-3.08c.58-.55 1.44-.7 2.17-.37a4.4 4.4 0 0 1 1.57 2.17c.43 1.07.72 2.19.86 3.33.27 1.67.79 4.1.8 4.6 0-.61-.11-1.91 0-2.5.12-.6.54-1.1 1.12-1.33.5-.15 1.02-.19 1.53-.1.52.1.98.4 1.29.83.38.98.6 2 .63 3.05.04-.91.2-1.82.47-2.7.28-.39.68-.67 1.15-.8.55-.1 1.11-.1 1.66 0 .46.15.85.44 1.14.82.35.88.56 1.82.63 2.77 0 .23.12-.65.48-1.24a1.67 1.67 0 1 1 3.17 1.07v3.77c-.06.97-.2 1.94-.4 2.9-.29.85-.7 1.65-1.2 2.38-.8.9-1.48 1.92-1.98 3.02a6.67 6.67 0 0 0 .03 3.2c-.68.07-1.37.07-2.05 0-.65-.1-1.45-1.4-1.67-1.8a.63.63 0 0 0-1.13 0c-.37.64-1.18 1.79-1.75 1.85-1.12.14-3.42 0-5.23 0 0 0 .3-1.66-.39-2.27-.68-.6-1.38-1.3-1.9-1.76l-1.4-1.6Z' clip-rule='evenodd'/%3E%3Cpath fill='%23000' d='M20.65 22.3v-6.24c0-.38-.31-.68-.7-.68-.37 0-.68.3-.68.68v6.23c0 .38.3.68.69.68.38 0 .69-.3.69-.68ZM17.2 22.3l-.04-6.25a.67.67 0 1 0-1.34.01l.04 6.24a.67.67 0 1 0 1.34 0ZM12.37 16.07l.04 6.22c0 .38.3.68.67.68.37 0 .67-.3.67-.68l-.04-6.23c0-.38-.3-.68-.67-.68-.37 0-.67.31-.67.69Z'/%3E%3C/svg%3E"),
+    auto;
+  --cursorGrab: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' fill='none' viewBox='0 0 28 28'%3E%3Cpath fill='%23fff' d='M8.32 14.57c-.15-.58-.31-1.35-.65-2.46-.33-1.1-.54-1.36-.74-1.95-.21-.59-.48-1.14-.8-1.87A19.2 19.2 0 0 1 5.4 6c-.13-.65.03-1.33.45-1.86.57-.55 1.39-.76 2.16-.55.6.26 1.1.7 1.46 1.25.47.75.85 1.55 1.14 2.38.45 1.15.77 2.33.97 3.54l.14.72V9.64c0-1.6-.1-2.9 0-4.67 0-.2.1-.94.13-1.14.04-.69.45-1.3 1.06-1.6.7-.3 1.52-.3 2.22 0 .64.3 1.06.9 1.1 1.6 0 .17.14 1.58.14 1.76V11.37c.04-2.1.22-4.19.54-6.26.19-.65.65-1.18 1.26-1.48.75-.3 1.6-.15 2.22.39.46.5.73 1.14.76 1.82v5.64c.14-.45.3-.86.43-1.18.13-.32.38-.97.57-1.36.2-.38.41-.75.65-1.1.25-.4.62-.71 1.07-.89a1.59 1.59 0 0 1 2.06.94c.1.58.1 1.17 0 1.75-.1.88-.3 1.76-.56 2.62-.2.7-.43 1.95-.54 2.53-.1.6-.36 2.2-.57 2.9-.3.83-.73 1.61-1.25 2.33a11.5 11.5 0 0 0-1.9 2.87 6.43 6.43 0 0 0 .04 3.05 9.2 9.2 0 0 1-1.95 0c-.62-.1-1.38-1.33-1.59-1.72a.6.6 0 0 0-1.08 0c-.36.6-1.13 1.7-1.67 1.77-1.06.12-3.25 0-4.98 0 0 0 .3-1.6-.37-2.16-.66-.57-1.31-1.24-1.8-1.68l-1.32-1.47c-.45-.57-1-1.73-1.97-3.17-.56-.8-1.59-1.73-2.03-2.5a2.78 2.78 0 0 1-.3-2.1 1.92 1.92 0 0 1 2.17-1.37c.74.05 1.43.35 1.97.86.42.37.82.76 1.19 1.19.25.3.32.44.6.8.29.37.48.74.34.2'/%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.25' d='M8.32 14.57c-.15-.58-.31-1.35-.65-2.46-.33-1.1-.54-1.36-.74-1.95-.21-.59-.48-1.14-.8-1.87A19.2 19.2 0 0 1 5.4 6c-.13-.65.03-1.33.45-1.86.57-.55 1.39-.76 2.16-.55.6.26 1.1.7 1.46 1.25.47.75.85 1.55 1.14 2.38.45 1.15.77 2.33.97 3.54l.14.72V9.64c0-1.6-.1-2.9 0-4.67 0-.2.1-.94.13-1.14.04-.69.45-1.3 1.06-1.6.7-.3 1.52-.3 2.22 0 .64.3 1.06.9 1.1 1.6 0 .17.14 1.58.14 1.76V11.37c.04-2.1.22-4.19.54-6.26.19-.65.65-1.18 1.26-1.48.75-.3 1.6-.15 2.22.39.46.5.73 1.14.76 1.82v5.64c.14-.45.3-.86.43-1.18.13-.32.38-.97.57-1.36.2-.38.41-.75.65-1.1.25-.4.62-.71 1.07-.89a1.59 1.59 0 0 1 2.06.94c.1.58.1 1.17 0 1.75-.1.88-.3 1.76-.56 2.62-.2.7-.43 1.95-.54 2.53-.1.6-.36 2.2-.57 2.9-.3.83-.73 1.61-1.25 2.33a11.5 11.5 0 0 0-1.9 2.87 6.43 6.43 0 0 0 .04 3.05 9.2 9.2 0 0 1-1.95 0c-.62-.1-1.38-1.33-1.59-1.72a.6.6 0 0 0-1.08 0c-.36.6-1.13 1.7-1.67 1.77-1.06.12-3.25 0-4.98 0 0 0 .3-1.6-.37-2.16-.66-.57-1.31-1.24-1.8-1.68l-1.32-1.47c-.45-.57-1-1.73-1.97-3.17-.56-.8-1.59-1.73-2.03-2.5a2.78 2.78 0 0 1-.3-2.1 1.92 1.92 0 0 1 2.17-1.37c.74.05 1.43.35 1.97.86.42.37.82.76 1.19 1.19.25.3.32.44.6.8.29.37.48.74.34.2'/%3E%3Cpath fill='%23000' d='M19.3 20.3v-6.24c0-.38-.3-.68-.68-.68-.38 0-.7.3-.7.68v6.23c0 .38.32.68.7.68.38 0 .69-.3.69-.68ZM16.13 20.3l-.01-6.25c0-.37-.31-.67-.69-.67-.37 0-.68.3-.68.68l.02 6.24c0 .37.3.67.68.67.38 0 .69-.3.68-.68ZM11.59 14.07l.03 6.22c0 .38.3.68.68.68.37 0 .67-.31.67-.69l-.04-6.22c0-.38-.3-.68-.67-.68a.68.68 0 0 0-.67.69Z'/%3E%3C/svg%3E"),
+    auto;
+  --cursorGrabbed: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='25' fill='none' viewBox='0 0 28 25'%3E%3Cpath fill='%23fff' d='M6.81 3.46c.9-.34 2.68-.13 3.14.88.47 1.01.75 2.32.77 2-.03-.97.05-1.93.25-2.88.2-.6.68-1.08 1.29-1.3a3.61 3.61 0 0 1 1.72-.1c.58.12 1.1.45 1.44.93.44 1.1.68 2.25.73 3.43.05-1 .22-2 .5-2.96.32-.44.77-.76 1.3-.9a5.2 5.2 0 0 1 1.87 0c.5.17.95.49 1.27.92.4 1 .64 2.04.71 3.1 0 .27.13-.72.55-1.38a1.88 1.88 0 1 1 3.55 1.2v4.23c-.07 1.1-.22 2.18-.45 3.25-.32.95-.78 1.85-1.35 2.68a13.51 13.51 0 0 0-2.22 3.39 7.71 7.71 0 0 0 .03 3.6c-.76.07-1.53.07-2.3 0-.73-.12-1.63-1.58-1.87-2.03a.71.71 0 0 0-1.27 0c-.41.71-1.33 2-1.87 2.08-1.26.15-3.86 0-5.88 0 0 0 .36-1.87-.43-2.55-.79-.67-1.55-1.46-2.13-1.98L4.6 17.35a8.33 8.33 0 0 1-2.32-3.75c-.4-1.76-.35-2.6 0-3.3a2.8 2.8 0 0 1 1.6-1.23c.54-.1 1.1-.06 1.64.12.37.15.68.4.92.73.43.58.58.86.39.22-.19-.63-.6-1.1-.8-1.87-.4-.9-.65-1.88-.72-2.86.08-.9.7-1.64 1.56-1.88'/%3E%3Cpath stroke='%23000' stroke-linejoin='round' stroke-width='2.25' d='M6.81 3.46c.9-.34 2.68-.13 3.14.88.47 1.01.75 2.32.77 2-.03-.97.05-1.93.25-2.88.2-.6.68-1.08 1.29-1.3a3.61 3.61 0 0 1 1.72-.1c.58.12 1.1.45 1.44.93.44 1.1.68 2.25.73 3.43.05-1 .22-2 .5-2.96.32-.44.77-.76 1.3-.9a5.2 5.2 0 0 1 1.87 0c.5.17.95.49 1.27.92.4 1 .64 2.04.71 3.1 0 .27.13-.72.55-1.38a1.88 1.88 0 1 1 3.55 1.2v4.23c-.07 1.1-.22 2.18-.45 3.25-.32.95-.78 1.85-1.35 2.68a13.52 13.52 0 0 0-2.22 3.39 7.71 7.71 0 0 0 .03 3.6c-.76.07-1.53.07-2.3 0-.73-.12-1.63-1.58-1.87-2.03a.71.71 0 0 0-1.27 0c-.41.71-1.33 2-1.87 2.08-1.26.15-3.86 0-5.88 0 0 0 .36-1.87-.43-2.55-.79-.67-1.55-1.46-2.13-1.98L4.6 17.35a8.33 8.33 0 0 1-2.32-3.75c-.4-1.76-.35-2.6 0-3.3a2.8 2.8 0 0 1 1.6-1.23c.54-.1 1.1-.06 1.64.12.37.15.68.4.92.73.43.58.58.86.39.22-.19-.63-.6-1.1-.8-1.87-.4-.9-.65-1.88-.72-2.86.04-.9.64-1.68 1.5-1.95Z' clip-rule='evenodd'/%3E%3Cpath fill='%23000' d='M19.29 18.3v-6.24c0-.38-.3-.68-.69-.68-.38 0-.69.3-.69.68v6.23c0 .38.3.68.69.68.38 0 .69-.3.69-.68ZM16.12 18.3l-.02-6.25c0-.37-.3-.67-.68-.67-.38 0-.68.3-.68.68l.01 6.24c0 .37.31.67.69.67.37 0 .68-.3.68-.68ZM11.57 12.07l.04 6.22c0 .38.3.68.67.68.37 0 .67-.31.67-.69l-.04-6.22c0-.38-.3-.68-.67-.68a.68.68 0 0 0-.67.69Z'/%3E%3C/svg%3E"),
+    auto;
+  --cursorText: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='25' fill='none' viewBox='0 0 13 25'%3E%3Cpath fill='%23000' stroke='%23fff' stroke-width='1.75' d='M8 18.48v-4.23h1.27v-3H8V5.8c.2-.44.5-.82.87-1.14.23-.16.52-.32.83-.44a5.4 5.4 0 0 1 1.17-.05l.87.05.05-.87.08-1.27.06-.87-.88-.06c-.7-.04-1.4 0-2.1.14l-.05.01-.06.02c-.7.25-1.29.56-1.82.95L7 2.28l-.03.02c-.16.13-.31.28-.46.42a6.93 6.93 0 0 0-.39-.38l-.03-.03-.03-.02a5.86 5.86 0 0 0-1.85-.97l-.04-.01-.04-.01a8.1 8.1 0 0 0-2.19-.16l-.87.06.06.87.08 1.27.06.88.87-.06c.43-.03.85 0 1.27.08.23.08.5.21.74.4.33.3.63.72.84 1.19v5.42H3.72v3h1.27v4.2c-.21.47-.51.89-.88 1.24-.2.14-.46.28-.75.37-.36.07-.8.1-1.22.06l-.87-.05-.06.87-.08 1.27-.06.88.87.05c.71.05 1.42 0 2.12-.14h.04l.04-.02a5.83 5.83 0 0 0 1.88-.95l.03-.02.03-.03.44-.43c.14.14.28.27.44.4l.02.02.02.01c.55.42 1.14.73 1.76.95l.05.02.06.01c.77.17 1.47.22 2.17.18l.88-.05-.05-.87-.07-1.27-.05-.87-.87.04c-.42.03-.83 0-1.24-.08-.24-.1-.52-.25-.8-.45A3.4 3.4 0 0 1 8 18.48Z'/%3E%3C/svg%3E"),
+    auto;
+}
+
+a,
+a *,
+button,
+button * {
+  cursor: var(--cursorPointer) !important;
+}
+
+/* ###################################################################### */
+/* General Styling */
+/* ###################################################################### */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-primary);
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: var(--cursorDefault);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"] {
+  cursor: var(--cursorText) !important;
+}
+
+body.is-open-menu {
+  overflow: hidden;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+/* General image */
+img {
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+form select::-ms-expand {
+  display: none;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  box-shadow: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Ipad and mobile devices */
+input,
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+}
+
+blockquote {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: var(--bold);
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-size: 90px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.container {
+  width: min(100% - 40px, 1200px);
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ###################################################################### */
+/* Icons */
+/* ###################################################################### */
+
+.icon {
+  display: block;
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  background-color: var(--color-black);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+.icon-facebook {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-facebook::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23E5E5E5' d='M23.625 12C23.625 5.578 18.422.375 12 .375S.375 5.578.375 12c0 5.802 4.251 10.612 9.809 11.484V15.36H7.23V12h2.954V9.439c0-2.914 1.734-4.523 4.39-4.523 1.273 0 2.603.227 2.603.227v2.86H15.71c-1.444 0-1.895.896-1.895 1.815V12h3.225l-.516 3.36h-2.709v8.124c5.558-.872 9.809-5.682 9.809-11.484Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath fill='%23E5E5E5' d='M23.625 12C23.625 5.578 18.422.375 12 .375S.375 5.578.375 12c0 5.802 4.251 10.612 9.809 11.484V15.36H7.23V12h2.954V9.439c0-2.914 1.734-4.523 4.39-4.523 1.273 0 2.603.227 2.603.227v2.86H15.71c-1.444 0-1.895.896-1.895 1.815V12h3.225l-.516 3.36h-2.709v8.124c5.558-.872 9.809-5.682 9.809-11.484Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h24v24H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+.icon-instagram {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-instagram::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' fill='none'%3E%3Cpath fill='%23E5E5E5' d='M12.005 6.436c-3.407 0-6.155 2.705-6.155 6.059s2.748 6.059 6.155 6.059 6.156-2.705 6.156-6.06c0-3.353-2.749-6.058-6.156-6.058Zm0 9.998c-2.201 0-4.001-1.767-4.001-3.94 0-2.172 1.794-3.939 4.001-3.939 2.207 0 4.002 1.767 4.002 3.94 0 2.172-1.8 3.939-4.002 3.939Zm7.843-10.246c0 .785-.643 1.413-1.435 1.413a1.421 1.421 0 0 1-1.436-1.413c0-.78.643-1.414 1.436-1.414.792 0 1.435.633 1.435 1.414Zm4.077 1.434c-.091-1.893-.53-3.57-1.94-4.952C20.583 1.29 18.88.856 16.956.761c-1.982-.11-7.923-.11-9.905 0-1.918.09-3.621.522-5.03 1.904C.61 4.047.177 5.724.08 7.617c-.112 1.951-.112 7.8 0 9.75.091 1.894.53 3.57 1.94 4.952 1.409 1.382 3.107 1.814 5.03 1.91 1.982.11 7.923.11 9.905 0 1.924-.09 3.627-.523 5.03-1.91 1.404-1.381 1.844-3.058 1.94-4.952.113-1.95.113-7.794 0-9.745Zm-2.56 11.839a4.02 4.02 0 0 1-2.283 2.246c-1.58.617-5.33.475-7.077.475-1.746 0-5.501.137-7.076-.475a4.02 4.02 0 0 1-2.283-2.246c-.626-1.556-.482-5.247-.482-6.966 0-1.72-.139-5.416.482-6.966A4.02 4.02 0 0 1 4.93 3.282c1.58-.617 5.33-.475 7.076-.475 1.747 0 5.502-.137 7.077.475a4.02 4.02 0 0 1 2.282 2.247c.627 1.555.482 5.247.482 6.966 0 1.719.145 5.416-.482 6.966Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' fill='none'%3E%3Cpath fill='%23E5E5E5' d='M12.005 6.436c-3.407 0-6.155 2.705-6.155 6.059s2.748 6.059 6.155 6.059 6.156-2.705 6.156-6.06c0-3.353-2.749-6.058-6.156-6.058Zm0 9.998c-2.201 0-4.001-1.767-4.001-3.94 0-2.172 1.794-3.939 4.001-3.939 2.207 0 4.002 1.767 4.002 3.94 0 2.172-1.8 3.939-4.002 3.939Zm7.843-10.246c0 .785-.643 1.413-1.435 1.413a1.421 1.421 0 0 1-1.436-1.413c0-.78.643-1.414 1.436-1.414.792 0 1.435.633 1.435 1.414Zm4.077 1.434c-.091-1.893-.53-3.57-1.94-4.952C20.583 1.29 18.88.856 16.956.761c-1.982-.11-7.923-.11-9.905 0-1.918.09-3.621.522-5.03 1.904C.61 4.047.177 5.724.08 7.617c-.112 1.951-.112 7.8 0 9.75.091 1.894.53 3.57 1.94 4.952 1.409 1.382 3.107 1.814 5.03 1.91 1.982.11 7.923.11 9.905 0 1.924-.09 3.627-.523 5.03-1.91 1.404-1.381 1.844-3.058 1.94-4.952.113-1.95.113-7.794 0-9.745Zm-2.56 11.839a4.02 4.02 0 0 1-2.283 2.246c-1.58.617-5.33.475-7.077.475-1.746 0-5.501.137-7.076-.475a4.02 4.02 0 0 1-2.283-2.246c-.626-1.556-.482-5.247-.482-6.966 0-1.72-.139-5.416.482-6.966A4.02 4.02 0 0 1 4.93 3.282c1.58-.617 5.33-.475 7.076-.475 1.747 0 5.502-.137 7.077.475a4.02 4.02 0 0 1 2.282 2.247c.627 1.555.482 5.247.482 6.966 0 1.719.145 5.416-.482 6.966Z'/%3E%3C/svg%3E");
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+.icon-mail {
+  height: 18px;
+  width: 24px;
+}
+
+.icon-mail::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='18' fill='none'%3E%3Cpath fill='%23E5E5E5' d='M23.545 5.944a.282.282 0 0 1 .455.22v9.586A2.25 2.25 0 0 1 21.75 18H2.25A2.25 2.25 0 0 1 0 15.75V6.169a.28.28 0 0 1 .455-.22c1.05.815 2.442 1.851 7.223 5.324.99.722 2.658 2.241 4.322 2.232 1.673.014 3.375-1.538 4.327-2.232 4.78-3.473 6.168-4.514 7.218-5.33ZM12 12c1.088.019 2.653-1.369 3.44-1.94 6.22-4.515 6.694-4.908 8.129-6.033.272-.211.431-.54.431-.886V2.25A2.25 2.25 0 0 0 21.75 0H2.25A2.25 2.25 0 0 0 0 2.25v.89c0 .347.16.67.431.887 1.435 1.12 1.908 1.518 8.128 6.032.788.572 2.354 1.96 3.441 1.941Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='18' fill='none'%3E%3Cpath fill='%23E5E5E5' d='M23.545 5.944a.282.282 0 0 1 .455.22v9.586A2.25 2.25 0 0 1 21.75 18H2.25A2.25 2.25 0 0 1 0 15.75V6.169a.28.28 0 0 1 .455-.22c1.05.815 2.442 1.851 7.223 5.324.99.722 2.658 2.241 4.322 2.232 1.673.014 3.375-1.538 4.327-2.232 4.78-3.473 6.168-4.514 7.218-5.33ZM12 12c1.088.019 2.653-1.369 3.44-1.94 6.22-4.515 6.694-4.908 8.129-6.033.272-.211.431-.54.431-.886V2.25A2.25 2.25 0 0 0 21.75 0H2.25A2.25 2.25 0 0 0 0 2.25v.89c0 .347.16.67.431.887 1.435 1.12 1.908 1.518 8.128 6.032.788.572 2.354 1.96 3.441 1.941Z'/%3E%3C/svg%3E");
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+.icon-linkedin {
+  height: 20px;
+  width: 20px;
+}
+
+.icon-linkedin::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z'/%3E%3C/svg%3E");
+}
+
+/* ###################################################################### */
+/* Header */
+/* ###################################################################### */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 28px 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  padding-top: 80px;
+}
+
+.header nav ul {
+  display: flex;
+  font-weight: var(--bold);
+}
+
+.header nav ul li:not(:last-child) {
+  margin-right: 66px;
+}
+
+.header nav ul li a {
+  display: block;
+  position: relative;
+}
+
+.header nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  pointer-events: none;
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.header nav ul li a.is-active,
+.header nav ul li a:hover {
+  color: var(--color-white);
+}
+
+.header nav ul li a.is-active::before,
+.header nav ul li a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+.header .header-contact-btn {
+  background-color: var(--color-white);
+  padding: 14px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header .header-contact-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+/* ######################################################## */
+
+.hamburger {
+  position: relative;
+  font: inherit;
+  display: none;
+  overflow: visible;
+  margin: 0;
+  padding: 0 15px;
+  height: 22px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.hamburger-inner {
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  transition-duration: 75ms;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+  display: block;
+  content: "";
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  border-radius: 4px;
+  background-color: var(--color-white);
+}
+
+.hamburger-inner:before {
+  top: -10px;
+}
+
+.hamburger .hamburger-inner:before {
+  transition: top 75ms ease 0.12s, opacity 75ms ease;
+}
+
+.hamburger-inner:after {
+  bottom: -10px;
+}
+
+.hamburger .hamburger-inner:after {
+  transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger.is-active .hamburger-inner {
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .hamburger-inner:before {
+  top: 0;
+  transition: top 75ms ease, opacity 75ms ease 0.12s;
+  opacity: 0;
+}
+
+.hamburger.is-active .hamburger-inner:after {
+  bottom: 0;
+  transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  transform: rotate(-90deg);
+}
+
+/* ###################################################################### */
+/* intro */
+/* ###################################################################### */
+
+.sec-intro {
+  padding: 40px 0;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro .intro-content {
+  max-width: 755px;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: var(--bold);
+  margin-bottom: 38px;
+}
+
+.intro .intro-image {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-bottom: 38px;
+}
+
+.intro .intro-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.intro .intro-social-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro .intro-social-nav ul li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.intro .intro-social-nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro .intro-social-nav ul li a:hover {
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 3px #fca31180;
+}
+
+.intro .intro-social-nav ul li a i::before {
+  background-color: var(--color-white);
+}
+
+.intro .intro-social-nav ul li a:hover i::before {
+  background-color: var(--color-secondary);
+}
+
+/* ###################################################################### */
+/* section-title */
+/* ###################################################################### */
+
+.section-title h1 {
+  position: relative;
+  display: inline-block;
+  padding-top: 36px;
+  margin-bottom: 78px;
+}
+
+.section-title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 230px;
+  background-color: var(--color-secondary);
+}
+
+.section-title-content {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-title-content-large {
+  max-width: 900px;
+}
+
+.section-title-content-full {
+  max-width: 100%;
+}
+
+.section-title {
+  margin-bottom: 42px;
+}
+
+/* ###################################################################### */
+/* tech list */
+/* ###################################################################### */
+
+.tech-list h3 {
+  font-weight: var(--reg);
+}
+
+.tech-list .tech-list-inner {
+  margin-bottom: 38px;
+}
+
+.tech-list .tech-list-inner ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-list .tech-list-inner ul li {
+  border-radius: 10px;
+  background-color: var(--color-white);
+  padding: 10px;
+  width: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech-list .tech-list-inner ul li img {
+  margin-bottom: 10px;
+  max-width: 50px;
+}
+
+.tech-list .tech-list-inner ul li p {
+  margin: 0;
+  font-size: 10px;
+}
+
+/* ###################################################################### */
+/* Services */
+/* ###################################################################### */
+
+.services {
+  margin-bottom: 40px;
+}
+
+.services-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 34px;
+}
+
+.services-item {
+  border-radius: 20px;
+  padding: 24px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-item h6 {
+  font-size: 20px;
+  font-weight: var(--bold);
+}
+
+.services-item img {
+  max-width: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.services-item p {
+  font-size: 16px;
+}
+
+/* ###################################################################### */
+/* Portfolio */
+/* ###################################################################### */
+
+.projects .project-list {
+  display: grid;
+  grid-gap: 30px;
+  /* margin-bottom: 40px; */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projects .project-item {
+  padding: 30px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: 460px 1fr; */
+  gap: 30px;
+}
+
+.projects .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects .project-btn span {
+  z-index: 3;
+}
+
+.projects .project-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 140px;
+  text-align: center;
+  height: 50px;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.projects .project-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  z-index: 1;
+  border-radius: 10px;
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.projects .project-btn:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+
+.projects .project-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* display: flex;
+  align-items: center; */
+}
+
+.projects .project-list-footer {
+  font-size: 20px;
+  max-width: 902px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+
+.projects .project-technology p {
+  margin: 0;
+}
+
+.projects .project-technology {
+  background-color: #14213d;
+  width: 100%;
+  padding: 10px 24px;
+  border-radius: 10px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ###################################################################### */
+/* ###################################################################### */
+
+@media (max-width: 1366px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .header {
+    padding: 16px 40px;
+    height: 80px;
+  }
+
+  .sec-intro {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    height: auto;
+  }
+
+  .area {
+    display: none;
+  }
+
+  .services-inner {
+    grid-gap: 10px;
+  }
+
+  .services-item {
+    padding: 20px;
+  }
+
+  .projects .project-item {
+    grid-template-columns: 350px 1fr;
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 68px;
+  }
+
+  .header {
+    padding: 10px 20px;
+    height: 65px;
+  }
+
+  .hamburger {
+    display: block;
+    padding: 0;
+  }
+
+  .header nav {
+    position: fixed;
+    height: calc(100vh - 68px);
+    width: 100%;
+    top: 68px;
+    left: 0;
+    z-index: 999;
+    display: block;
+    background-color: var(--color-white);
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(32px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .header nav.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translate(0);
+  }
+
+  .header nav ul {
+    flex-direction: column;
+  }
+
+  .header nav ul li:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  .header nav ul li a {
+    display: inline-block;
+  }
+
+  .header nav ul li a:hover,
+  .header nav ul li a.is-active {
+    color: var(--color-secondary);
+  }
+
+  .intro .intro-content {
+    max-width: 450px;
+  }
+
+  .services-inner {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .projects .project-item {
+    grid-template-columns: 1fr;
+  }
+
+  .projects .project-image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after,
+  .hamburger-box,
+  .hamburger {
+    width: 30px;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  main {
+    padding-top: 55px;
+  }
+
+  .sec-intro {
+    padding: 40px 0;
+  }
+
+  .header .header-contact-btn {
+    padding: 8px 20px;
+    border-radius: 6px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after,
+  .hamburger-box,
+  .hamburger {
+    width: 30px;
+  }
+
+  .header nav {
+    height: calc(100vh - 55px);
+    top: 55px;
+  }
+
+  .header {
+    height: 55px;
+  }
+
+  .intro .intro-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .section-title h1 {
+    margin-bottom: 40px;
+    padding-top: 24px;
+  }
+
+  .section-title h1::after {
+    bottom: -16px;
+    height: 2px;
+  }
+
+  .section-title-content {
+    margin-bottom: 24px;
+  }
+
+  .services-inner {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+
+  .services-item {
+    border-radius: 10px;
+  }
+
+  .projects .project-item {
+    border-radius: 10px;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .projects .project-technology p {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .projects .project-technology {
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .projects .project-btn {
+    width: 100%;
+    font-weight: 900;
+    border-radius: 6px;
+  }
+}
